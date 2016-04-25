@@ -1,0 +1,79 @@
+{
+    "apps": [
+        {
+          // applyx (auth)
+          "name"        : "applyx-app",
+          "script"      : "server.js",
+          "cwd"         : "./applyx/applyx",
+          "env": {
+            "NODE_ENV": "development",
+            "LOG_LEVEL": "info",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
+          },
+          "env_production" : {
+             "NODE_ENV": "production"
+          },
+          "env_staging" : {
+             "NODE_ENV" : "staging",
+             "TEST"     : true
+          }
+        },
+
+        {
+          // riot-starter (auth) server
+          "name"        : "auth-app-server",
+          "script"      : "server/index.js",
+          "pre-deploy"  : "npm run client",
+          "cwd"         : "./riot-applyx/riot-applyx",
+          "env": {
+            "LOG_LEVEL": "info",
+            "NODE_ENV": "development",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
+          },
+          "env_production" : {
+             "NODE_ENV": "production"
+          },
+          "env_staging" : {
+             "NODE_ENV" : "staging",
+             "TEST"     : true
+          }
+        },
+        {
+          // Brackets App
+          "name"        : "brackets-app",
+          "script"      : "/usr/local/bin/npm",
+          "args"        : ["start"],
+          "cwd"         : "./brackets/brackets",
+          "env": {
+            "NODE_ENV": "development",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
+          },
+          "env_production" : {
+             "NODE_ENV": "production"
+          },
+          "env_staging" : {
+             "NODE_ENV" : "staging",
+             "TEST"     : true
+          }
+        },
+        {
+            // Fyler App
+            "name": "fyler-app",
+            "script": "server.js",
+            // "pre-deploy" : "gulp prod",
+            "cwd": "./fyler/fyler",
+            "env": {
+                "LOG_LEVEL": "info",
+                "NODE_ENV": "development",
+                "AWESOME_SERVICE_API_TOKEN": "xxx"
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            },
+            "env_staging": {
+                "NODE_ENV": "staging",
+                "TEST": true
+            }
+        }
+    ]
+}
