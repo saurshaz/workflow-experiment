@@ -22,5 +22,6 @@ Steps :: (case study is 4 projects of mine)
 	- `fyler`,`applyx`,`riot-applyx` & `brackets`
 - grab `ecosystem.json` from this repo
 - run pm2 using `pm2 deploy <configuration_file> <environment> <command>`
+- wrap the working setup in a `docker-compose.yaml` script
 
 
