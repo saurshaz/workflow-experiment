@@ -10,7 +10,7 @@ A note to self on what this is meant to be -
 Please note plan is to wrap all below in s simply executable/launchable step
 
 
-Steps :: (case study is 4 projects of mine)
+Steps :: (case study is 4 projects of mine ... can be anything)
 
 - a fresh `ubuntu 12+` system with mongodb running
 - get all the code by whatever means on 
@@ -25,3 +25,22 @@ Steps :: (case study is 4 projects of mine)
 - wrap the working setup in a `docker-compose.yaml` script
 
 
+
+
+# Docker Packaging :: Steps
+---------------------------------------------------------------------------------------------------------------------
+- start with a docker image of `nginx` + `mongodb` + `redis` + `elasticsearch`
+- install `node`
+- install `nvm` 
+- install `pm2` globally
+- `git clone` steps to get all the code in different folders
+- do not install `webpack` or `gulp` or anything else globally. use `node_modules\.bin\webpack` syntax
+- install dependencies `npm i` and  `bower i` with proper `node` & `npm` version switching
+- clone `ecosystem.json` for pm2
+- start everything with `pm2`
+- setup remote_logging with `papertrail` via installing 
+	- `remote_syslog` 
+	- and creating `/etc/log_files.yml`
+- give right permissions to any shell script or executable run from anywhere
+- all errors shal be `noisy`, nothing silent
+- send an email upon successful deploy. use a shell script with `mailgun api key`
