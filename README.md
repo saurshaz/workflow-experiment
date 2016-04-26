@@ -14,8 +14,8 @@ Steps :: (case study is 4 projects of mine)
 
 - a fresh `ubuntu 12+` system with mongodb running
 - get all the code by whatever means on 
-- maintain .nvmrc file (node v4.2.0 and npm 3+ needed) 
-- install `pm2`,`nodemon` globally
+- maintain .nvmrc file (node v4.2.0 and npm `3.8.7` needed) 
+- install `pm2`,`nodemon` , `http-server` globally
 - link logging to papertrail for the system (TODO : :filter for the apps only later)
 	`http://help.papertrailapp.com/kb/configuration/configuring-remote-syslog-from-unixlinux-and-bsdos-x/`
 - install all dependencies in these apps(TODO :: make a SH script)

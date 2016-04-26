@@ -4,6 +4,7 @@
           // applyx (auth)
           "name"        : "applyx-app",
           "script"      : "server.js",
+          "watch"      : true,
           "cwd"         : "./applyx/applyx",
           "env": {
             "NODE_ENV": "development",
@@ -23,7 +24,8 @@
           // riot-starter (auth) server
           "name"        : "auth-app-server",
           "script"      : "server/index.js",
-          "pre-deploy"  : "npm run client",
+          "pre-deploy"  : "sh riotserve.sh",
+          "watch"      : true,
           "cwd"         : "./riot-applyx/riot-applyx",
           "env": {
             "LOG_LEVEL": "info",
@@ -44,6 +46,7 @@
           "script"      : "/usr/local/bin/npm",
           "args"        : ["start"],
           "cwd"         : "./brackets/brackets",
+          "watch"      : true,
           "env": {
             "NODE_ENV": "development",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
@@ -60,8 +63,9 @@
             // Fyler App
             "name": "fyler-app",
             "script": "server.js",
-            // "pre-deploy" : "gulp prod",
+            "pre-deploy" : "gulp prod",
             "cwd": "./fyler/fyler",
+            "watch"      : true,
             "env": {
                 "LOG_LEVEL": "info",
                 "NODE_ENV": "development",
