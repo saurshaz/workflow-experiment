@@ -45,3 +45,26 @@ Steps :: (case study is 4 projects of mine ... can be anything)
 - give right permissions to any shell script or executable run from anywhere
 - all errors shal be `noisy`, nothing silent
 - send an email upon successful deploy. use a shell script with `mailgun api key`
+
+
+# Possible approaches
+---------------------------------------------------------------------------------------------------------------------
+- Docker microservices approach(flavour 1)
+	- 4 Docker containers (each running one app) 
+	- and one for mongo and nginx each 
+	- all wrapped and starable with one docker-compose.yml
+	- the fetching of code is also part of the containers only. No src code linked here
+- Docker microservices approach(flavour 2)
+	- 4 Docker containers (each running one app) 
+	- and one for mongo and nginx each 
+	- all wrapped and starable with one docker-compose.yml
+	- the fetching of code is NOT part of the app containers bootstrapping here. src code fetched before and linked here as volumes
+- Less automatied but working approach.shell based
+	- code fetch done using one shell script 
+	- pm2 ecosystem.json file also fetched
+	- environemnt specific pm2 launched which starts everything (this is app only automation)
+	- all non-app automation done using shell scripts
+
+
+- Circle CI/jenkins + Github + Mocha based automation post stability (manual triggers in stage, push based automated after that )
+

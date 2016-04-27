@@ -43,7 +43,7 @@
         {
           // Brackets App
           "name"        : "brackets-app",
-          "script"      : "/usr/local/bin/npm",
+          "script"      : "npm",
           "args"        : ["start"],
           "cwd"         : "./brackets",
           "watch"      : false,
