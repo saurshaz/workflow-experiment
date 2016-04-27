@@ -1,7 +1,13 @@
 
-
-init:
-    build: ./docker-files/init
+api:
+  build: ./docker-files/api
+  ports:
+    - "3030:3030"
+  volumes:
+    - ./volumes/sampleapp:/srv/www/
+  command: bash -c "cd /srv/www && npm install && node /srv/www/server.js"
+  links:
+    - mongodb
 nginx:
     build: ./docker-files/nginx
     links:
@@ -9,42 +15,33 @@ nginx:
         - node2:node2
         - node3:node3
         - node4:node4
+        - api:api
     ports:
         - "80:80"
 node1:
     build: ./docker-files/app-one
     links:
-        - redis
-        - mongodb
-    ports:
-        - "3000"
-node2:
-    build: ./docker-files/app-two
-    links:
-        - redis
         - mongodb
     ports:
         - "4000"
+node2:
+    build: ./docker-files/app-two
+    links:
+        - mongodb
+    ports:
+        - "7000"
 node3:
     build: ./docker-files/app-three
     links:
-        - redis
         - mongodb
     ports:
-        - "5000"
+        - "3000"
 node4:
     build: ./docker-files/app-four
     links:
-        - redis
         - mongodb
     ports:
-        - "8000"
-redis:
-    image: redis
-    ports:
-        - "6379"
-redis:
-  image: redis
+        - "5000"
 
 mongodb:
   image: mongo
@@ -53,8 +50,3 @@ mongodb:
   environment:
     MONGODB_PASS: password
 
-elasticsearch:
-  image: elasticsearch
-  ports:
-    - "9201:9201"
-    - "9301:9301"
