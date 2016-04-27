@@ -33,9 +33,10 @@ Steps :: (case study is 4 projects of mine ... can be anything)
 - install `node`
 - install `nvm` 
 - install `pm2` globally
-- `git clone` steps to get all the code in different folders
-- do not install `webpack` or `gulp` or anything else globally. use `node_modules\.bin\webpack` syntax
-- install dependencies `npm i` and  `bower i` with proper `node` & `npm` version switching
+- have different microservices as nested `docker containers` 
+	- `git clone` steps to get all the code in different folders
+	- do not install `webpack` or `gulp` or anything else globally. use `node_modules\.bin\webpack` syntax
+	- install dependencies `npm i` and  `bower i` with proper `node` & `npm` version switching
 - clone `ecosystem.json` for pm2
 - start everything with `pm2`
 - setup remote_logging with `papertrail` via installing 
