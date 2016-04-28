@@ -62,6 +62,7 @@ Steps :: (case study is 4 projects of mine ... can be anything)
 - Less automatied but working approach.shell based
 	- code fetch done using one shell script 
 	- pm2 ecosystem.json file also fetched
+	- pm2-gui, with a .ini setup
 	- environemnt specific pm2 launched which starts everything (this is app only automation)
 	- all non-app automation done using shell scripts
 
