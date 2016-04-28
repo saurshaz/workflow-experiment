@@ -13,12 +13,12 @@
           },
           "env_production" : {
             "LOG_LEVEL": "info",
-             "NODE_ENV": "stage",
+             "NODE_ENV": "prod",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
           },
           "env_staging" : {
              "LOG_LEVEL": "info",
-             "NODE_ENV": "prod",
+             "NODE_ENV": "stage",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
           }
         },
@@ -37,12 +37,12 @@
           },
           "env_production" : {
             "LOG_LEVEL": "info",
-             "NODE_ENV": "stage",
+             "NODE_ENV": "prod",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
           },
           "env_staging" : {
              "LOG_LEVEL": "info",
-             "NODE_ENV": "prod",
+             "NODE_ENV": "stage",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
           }
         },
@@ -60,12 +60,12 @@
           },
           "env_production" : {
             "LOG_LEVEL": "info",
-             "NODE_ENV": "stage",
+             "NODE_ENV": "prod",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
           },
           "env_staging" : {
              "LOG_LEVEL": "info",
-             "NODE_ENV": "prod",
+             "NODE_ENV": "stage",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
           }
         },
@@ -78,20 +78,20 @@
             "cwd": ".",
             "watch"      : false,
             "env": {
-                "NODE_ENV": "development",
-                "LOG_LEVEL": "info",
-                "AWESOME_SERVICE_API_TOKEN": "xxx"
-              },
-              "env_production" : {
-                "LOG_LEVEL": "info",
-                 "NODE_ENV": "stage",
-                "AWESOME_SERVICE_API_TOKEN": "xxx"
-              },
-              "env_staging" : {
-                 "LOG_LEVEL": "info",
-                 "NODE_ENV": "prod",
-                "AWESOME_SERVICE_API_TOKEN": "xxx"
-              }
+            "NODE_ENV": "development",
+            "LOG_LEVEL": "info",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
+          },
+          "env_production" : {
+            "LOG_LEVEL": "info",
+             "NODE_ENV": "prod",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
+          },
+          "env_staging" : {
+             "LOG_LEVEL": "info",
+             "NODE_ENV": "stage",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
+          }
         }
     ]
 }
