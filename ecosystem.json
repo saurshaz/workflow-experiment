@@ -12,11 +12,14 @@
             "AWESOME_SERVICE_API_TOKEN": "xxx"
           },
           "env_production" : {
-             "NODE_ENV": "production"
+            "LOG_LEVEL": "info",
+             "NODE_ENV": "prod",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
           },
           "env_staging" : {
-             "NODE_ENV" : "staging",
-             "TEST"     : true
+             "LOG_LEVEL": "info",
+             "NODE_ENV": "stage",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
           }
         },
 
@@ -28,16 +31,19 @@
           "watch"      : true,
           "cwd"         : "./riot-applyx/riot-applyx",
           "env": {
-            "LOG_LEVEL": "info",
             "NODE_ENV": "development",
+            "LOG_LEVEL": "info",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
           },
           "env_production" : {
-             "NODE_ENV": "production"
+            "LOG_LEVEL": "info",
+             "NODE_ENV": "prod",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
           },
           "env_staging" : {
-             "NODE_ENV" : "staging",
-             "TEST"     : true
+             "LOG_LEVEL": "info",
+             "NODE_ENV": "stage",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
           }
         },
         {
@@ -49,14 +55,18 @@
           "watch"      : true,
           "env": {
             "NODE_ENV": "development",
+            "LOG_LEVEL": "info",
             "AWESOME_SERVICE_API_TOKEN": "xxx"
           },
           "env_production" : {
-             "NODE_ENV": "production"
+            "LOG_LEVEL": "info",
+             "NODE_ENV": "prod",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
           },
           "env_staging" : {
-             "NODE_ENV" : "staging",
-             "TEST"     : true
+             "LOG_LEVEL": "info",
+             "NODE_ENV": "stage",
+            "AWESOME_SERVICE_API_TOKEN": "xxx"
           }
         },
         {
@@ -67,16 +77,19 @@
             "cwd": "./fyler/fyler",
             "watch"      : true,
             "env": {
-                "LOG_LEVEL": "info",
-                "NODE_ENV": "development",
-                "AWESOME_SERVICE_API_TOKEN": "xxx"
+              "NODE_ENV": "development",
+              "LOG_LEVEL": "info",
+              "AWESOME_SERVICE_API_TOKEN": "xxx"
             },
-            "env_production": {
-                "NODE_ENV": "production"
+            "env_production" : {
+              "LOG_LEVEL": "info",
+               "NODE_ENV": "prod",
+              "AWESOME_SERVICE_API_TOKEN": "xxx"
             },
-            "env_staging": {
-                "NODE_ENV": "staging",
-                "TEST": true
+            "env_staging" : {
+               "LOG_LEVEL": "info",
+               "NODE_ENV": "stage",
+              "AWESOME_SERVICE_API_TOKEN": "xxx"
             }
         }
     ]
